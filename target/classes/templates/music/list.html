@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Demo Spring Boot</title>
+ 
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+ 
+    <link href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+ 
+<div class="container">
+    <div class="jumbotron">
+        <h1>Demo Spring Boot</h1>
+    </div>
+ 
+    <div>
+        <a class="btn btn-primary" th:href="@{/playlists/{playlistId}/musics/data(playlistId=${playlistId})}">
+          New music</a>
+    </div>
+ 
+    <hr/>
+    <div th:if="${musics != null}">
+        <h4>
+            Playlist musics
+        </h4>
+ 
+        <div th:if="${message != null}">
+            <div class="alert alert-info" role="alert">
+                <span th:text="${message == null ? '&nbsp;' : message}">message</span>
+            </div>
+        </div>
+ 
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Singer</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tr th:each="music : ${musics}">
+                <td th:text="${music.name}">name</td>
+                <td th:text="${music.singer}">singer</td>
+                <td th:text="${music.grade}">grade</td>
+                <td>
+                    <a class="btn btn-sm btn-info" th:href="@{/playlists/{playlistId}/musics/{musicId}/update(
+                      playlistId=${playlistId},musicId=${music.id})}">Edit</a>
+                    <a class="btn btn-sm btn-danger" th:href="@{/playlists/{playlistId}/musics/{musicId}/delete(
+                      playlistId=${playlistId},musicId=${music.id})}">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+ 
+    <div th:if="${#lists.isEmpty(musics)}">
+        <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            0 musics created!
+        </div>
+    </div>
+ 
+    <hr/>
+    <a class="btn btn-light" th:href="@{/playlists/list}">Go back</a>
+ 
+    <hr/>
+    <footer class="footer">
+        <p>&copy; 2018 SAP Hybris - Software Academy</p>
+    </footer>
+ 
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+// Spring.io - create spring project using command line
+curl start.spring.io
+
+spring.main.banner-mode=off
+logging.level.org.springframework=ERROR
+logging.pattern.console=%d{dd-MM-yyyy HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n

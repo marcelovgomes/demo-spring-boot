@@ -1,0 +1,12 @@
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/dao/MusicaDao.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/dao/MusicaDaoImpl.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/config/ConfiguracaoSpringMvc.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/service/MusicaServiceImpl.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/service/PlaylistServiceImpl.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/dao/PlaylistDaoImpl.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/SpotmusicApplication.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/domain/Musica.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/domain/Playlist.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/service/PlaylistService.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/dao/PlaylistDao.java
+/Users/d074177/eclipse-workspace/intro-spring-boot/src/main/java/br/com/devmedia/service/MusicaService.java

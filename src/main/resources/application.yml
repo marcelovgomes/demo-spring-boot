@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demospringboot?useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password: mysql@2018
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        hbm2ddl:
+          auto: update
+          management:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true

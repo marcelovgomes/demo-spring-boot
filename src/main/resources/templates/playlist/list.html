@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Demo Spring Boot</title>
+ 
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+ 
+    <link href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+ 
+<div class="container">
+    <div class="jumbotron">
+        <h1>Demo Spring Boot</h1>
+    </div>
+ 
+    <div>
+        <a class="btn btn-primary" th:href="@{/playlists/data}">New playlist</a>
+    </div>
+    <hr/>
+ 
+    <div th:if="${playlists != null}">
+        <h4>
+            Playlists
+        </h4>
+ 
+        <div th:if="${message != null}">
+            <div class="alert alert-info" role="alert">
+                <span th:text="${message}">message</span>
+            </div>
+        </div>
+ 
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tr th:each="playlist : ${playlists}">
+                <td >
+                    <a th:text="${playlist.name}" th:href="@{/playlists/{id}/musics/list(id=${playlist.id})}">name</a>
+                </td>
+                <td th:text="${playlist.description}">description</td>
+                <td>
+                    <a class="btn btn-sm btn-info" th:href="@{/playlists/{id}/update(id=${playlist.id})}">Edit</a>
+                    <a class="btn btn-sm btn-danger" th:href="@{/playlists/{id}/delete(id=${playlist.id})}">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+ 
+    <div th:if="${#lists.isEmpty(playlists)}">
+        <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            0 playlists created!
+        </div>
+    </div>
+    <hr/>
+ 
+    <a class="btn btn-light" href="/home">Go back</a>
+    <hr/>
+ 
+    <footer class="footer">
+        <p>&copy; 2018 SAP Hybris - Software Academy</p>
+    </footer>
+ 
+</div>
+</body>
+</html>
