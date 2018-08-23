@@ -37,14 +37,14 @@
             <thead>
             <tr>
                 <th>Name</th>
-                <th>Singer</th>
+                <th>Band</th>
                 <th>Grade</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tr th:each="music : ${musics}">
                 <td th:text="${music.name}">name</td>
-                <td th:text="${music.singer}">singer</td>
+                <td th:text="${music.band}">band</td>
                 <td th:text="${music.grade}">grade</td>
                 <td>
                     <a class="btn btn-sm btn-info" th:href="@{/playlists/{playlistId}/musics/{musicId}/update(

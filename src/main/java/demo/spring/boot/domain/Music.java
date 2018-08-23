@@ -22,7 +22,7 @@ public class Music {
     @NotBlank
     @Size(min = 2, max = 50)
     @Column(nullable = false, length = 50)
-    private String singer;
+    private String band;
  
     @Range(min = 0, max = 10)
     @Column(nullable = false)
@@ -48,12 +48,12 @@ public class Music {
         this.name = name;
     }
  
-    public String getSinger() {
-        return singer;
+    public String getBand() {
+        return band;
     }
  
-    public void setSinger(String singer) {
-        this.singer = singer;
+    public void setBand(String band) {
+        this.band = band;
     }
  
     public int getGrade() {
