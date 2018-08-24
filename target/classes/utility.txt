@@ -10,3 +10,5 @@ logging.pattern.console=%d{dd-MM-yyyy HH:mm:ss} %magenta([%thread]) %highlight(%
 http://www.matera.com/blog/post/crud-com-spring-e-thymeleaf
 
 http://www.ciceroednilson.com.br/?s=spring+boot
+
+https://www.baeldung.com/spring-requestmapping
