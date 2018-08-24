@@ -4,3 +4,9 @@ curl start.spring.io
 spring.main.banner-mode=off
 logging.level.org.springframework=ERROR
 logging.pattern.console=%d{dd-MM-yyyy HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n
+
+
+// Interesting articles
+http://www.matera.com/blog/post/crud-com-spring-e-thymeleaf
+
+http://www.ciceroednilson.com.br/?s=spring+boot
